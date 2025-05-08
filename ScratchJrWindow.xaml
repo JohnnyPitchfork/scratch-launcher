@@ -1,0 +1,26 @@
+﻿<!-- Separate XAML for ScratchJr Window for modular OOP design -->
+<Window x:Class="ScratchLauncher.ScratchJrWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ScratchJr" 
+        WindowState="Maximized" 
+        WindowStyle="None" 
+        Topmost="True">
+
+    <Grid>
+        <StackPanel>
+            <Button 
+                Content="Return to Launcher" 
+                FontSize="16" 
+                Padding="10" 
+                Margin="0,10,0,10" 
+                Click="ReturnToLauncher_Click"/>
+
+            <WebView2 
+                Name="ScratchJrWebView" 
+                Source="https://codejr.org/scratchjr/index.html" 
+                Height="600" 
+                Width="800"/>
+        </StackPanel>
+    </Grid>
+</Window>

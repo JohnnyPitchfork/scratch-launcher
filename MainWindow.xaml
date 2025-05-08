@@ -1,12 +1,41 @@
-﻿<Window x:Class="ScratchLauncher.MainWindow"
+﻿<!-- Updated XAML layout for Scratch Launcher with better structure and matching the existing MainWindow.xaml.cs logic -->
+<Window x:Class="ScratchLauncher.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ScratchLauncher"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Scratch Launcher" 
+        Height="450" 
+        Width="800" 
+        WindowState="Maximized" 
+        ResizeMode="NoResize" 
+        WindowStyle="None" 
+        Topmost="True" 
+        WindowStartupLocation="CenterScreen">
 
+    <Grid>
+        <StackPanel 
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center" 
+            Margin="10">
+            <TextBlock Text="Choose Your App" 
+                FontSize="24" 
+                FontWeight="Bold" 
+                TextAlignment="Center" 
+                Margin="0,0,0,20"/>
+
+            <Button Content="Launch Scratch Desktop" 
+                    FontSize="16" 
+                    Padding="10" 
+                    Margin="0,0,0,10" 
+                    Click="LaunchScratchDesktop_Click"/>
+
+            <Button Content="Launch ScratchJr" 
+                    FontSize="16" 
+                    Padding="10" 
+                    Margin="0,0,0,10" 
+                    Click="LaunchScratchJr_Click"/>
+        </StackPanel>
     </Grid>
 </Window>
